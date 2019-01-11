@@ -29,19 +29,24 @@
 			<td>
 			<%
 			dest = String.valueOf(request.getAttribute("dest"));
+			
 			switch(dest){
 			case "NONE" :
-				%>
-				<%
+	
 			break;
 			case "join-form":
 				%>
 				<%@include file="join-form.jsp"%>
 				<%
 			break;
-			case "detail":
+			case "member_detail":
 				%>
-				<%@include file="member-detail.jsp"%>
+				<%@include file="member_detail.jsp"%>
+				<%
+			break;
+			case "member_update":
+				%>
+				<%@include file="member_update.jsp"%>
 				<%
 			break;
 			}

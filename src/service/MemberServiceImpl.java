@@ -49,6 +49,7 @@ public class MemberServiceImpl implements MemberService{
 		boolean exist = false;	
 		MemberBean memberBean =null;
 		memberBean = dao.selectMemberById(id);
+		
 		if(memberBean.getPass().equals(pass)) {
 			exist = true;
 		}

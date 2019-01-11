@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import = "domain.MemberBean" %>
-<div id = "member-detail">
+<div id = "member_detail">
 <%
-MemberBean member = (MemberBean)request.getAttribute("member");
+
+MemberBean user = (MemberBean)session.getAttribute("user");//세션에서 가져옴
 %>
 <table>
 	<tr>
@@ -12,19 +13,19 @@ MemberBean member = (MemberBean)request.getAttribute("member");
 	</tr>
 	<tr>
 		<td>ID</td>
-		<td><%= member.getId() %></td>
+		<td><%= user.getId() %></td>
 	</tr>
 	<tr>
 		<td>비밀번호</td>
-		<td><%= member.getPass() %></td>
+		<td><%= user.getPass() %></td>
 	</tr>
 	<tr>
 		<td>이름</td>
-		<td><%= member.getName() %></td>
+		<td><%= user.getName() %></td>
 	</tr>
 	<tr>
 		<td>주민번호</td>
-		<td><%= member.getSsn() %></td>
+		<td><%= user.getSsn() %></td>
 	</tr>
 </table>
 마이페이지
